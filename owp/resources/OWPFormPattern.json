@@ -19,7 +19,7 @@
 		},
 		{
 			"key": "BeneficiaryBankName",			
-			"regexString": "(?<BeneficiaryBankName>(((?<=ADDRESS\\*)(.*?)(?=SWIFT CODE))|((?<=ADDRESS\\* SWIFT)(.*?)(?=SORT))|((?<=BANK NAME)(.*?)(?=(ACCOUNT NUMBER|THANKING|SWIFT CODE|ROUTING NO|CUSTOMER’S NAME)))|((?<=BANK\\s*:)(.*?)(?=(SWIFT CODE|ACCOUNT NO. :)))|((?<=BENEFICIARY ADDRESS)(.*?)(?=PURPOSE))|((?<=(BELOW BANK|BANK DETAILS))(.*?)(?=ACCOUNT NO))|((?<=BENEFICIARY BANK)(.*?)(?=A/C NO))))"
+			"regexString": "(?<BeneficiaryBankName>(((?<=ADDRESS\\*)(.*?)(?=SWIFT CODE))|((?<=ADDRESS\\* SWIFT)(.*?)(?=SORT))|((?<=BANK NAME)(.*?)(?=(ACCOUNT NUMBER|THANKING|SWIFT CODE|ROUTING NO|CUSTOMER’S NAME)))|((?<=BANK)[\\s*:](.*?)(?=(SWIFT CODE|ACCOUNT NO. :)))|((?<=BENEFICIARY ADDRESS)(.*?)(?=PURPOSE))|((?<=(BELOW BANK|BANK DETAILS))(.*?)(?=ACCOUNT NO))|((?<=BENEFICIARY BANK)(.*?)(?=A/C NO))))"
 		},		
 		{
 			"key": "BeneficiaryName",			
