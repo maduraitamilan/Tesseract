@@ -11,7 +11,7 @@
 		},
 		{
 			"key": "SwiftCode",
-			"regexString":"(?<SwiftCode>((?<=SWIFT)\\s+[A-Z0-9]{4}\\s[A-Z]{4}\\s[A-Z]{3})|((?<=SWIFT CODE[\\s*:]+)[A-Z]{4}\\s*[A-Z0-9]{4}[A-Z]{0,3})|((?<=SWIFT CODE[\\s*:]+)[A-Z0-9]{8,11})|([A-Z0-9]{8,11}(?=[\\s*1]+PURPOSE OF TRANSFER))|((?<=SORT)\\s[A-Z ]{8,11}[\\s*]+(?=CODE))|((?<=ADDRESS[\\s*]+)[A-Z]{8,11}(?=[\\s*]+SWIFT CODE)))"
+			"regexString":"(?<SwiftCode>((?<=SWIFT)\s+[A-Z0-9]{4}\s[A-Z]{4}\s[A-Z]{3})|((?<=SWIFT CODE)[\s*:]+[A-Z]{4}\s*[A-Z0-9]{4}[A-Z]{0,3})|((?<=SWIFT CODE)[\s*:]+[A-Z0-9]{8,11})|([A-Z0-9]{8,11}(?=[\s*1]+PURPOSE OF TRANSFER))|((?<=SORT)\s[A-Z ]{8,11}[\s*]+(?=CODE))|((?<=ADDRESS)[\s*]+[A-Z]{8,11}(?=[\s*]+SWIFT CODE)))"
 		},
 		{
 			"key": "IBAN",			
