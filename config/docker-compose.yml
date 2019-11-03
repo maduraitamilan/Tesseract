@@ -1,0 +1,14 @@
+version: '1'
+
+services:
+  tesseract-engine:
+    image: maduraitamilan/tesseract-engine  
+  springboot-tesseract-master:
+    image: maduraitamilan/tesseract-master:v1.0.0
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8443:8443"
+	depends_on:
+      - tesseract-engine
