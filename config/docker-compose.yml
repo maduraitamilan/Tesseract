@@ -1,5 +1,3 @@
-version: '1'
-
 services:
   tesseract-engine:
     image: maduraitamilan/tesseract-engine:v1.0.0
