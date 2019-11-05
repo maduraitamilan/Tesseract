@@ -2,7 +2,7 @@ version: '1'
 
 services:
   tesseract-engine:
-    image:maduraitamilan/tesseract-engine:v1.0.0
+    image: maduraitamilan/tesseract-engine:v1.0.0
   springboot-tesseract-master:
     image: maduraitamilan/tesseract-master:v1.0.0          
     ports:
