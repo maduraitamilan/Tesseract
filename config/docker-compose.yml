@@ -1,11 +1,13 @@
+version: '3.1'
+
 services:
-  tesseract-engine:
-    image: maduraitamilan/tesseract-engine:v1.0.0
-  springboot-tesseract-master:
-    image: maduraitamilan/tesseract-master:v1.0.0          
+
+  tess4j-ocr:
+    container_name: ocr-tesseract
+    image: maduraitamilan/ocr-tesseract
+    restart: always  
     ports:
-      - "8443:8443"
-    environment: 
-      - TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
-    depends_on:
-      - tesseract-engine
+      - "8445:8445"
+    environment:
+      - LC_ALL=C
+      - TESSDATA_PREFIX=/usr/share/tessdata
