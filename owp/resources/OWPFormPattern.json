@@ -60,7 +60,7 @@
       "key": "BeneficiaryBankName",
       "regexString": [
         {
-          "option": "(?<BeneficiaryBankName>(((?<=ADDRESS\\*)(.*?)(?=(SWIFT CODE)))|((?<=ADDRESS\\* SWIFT)(.*?)(?=SORT))|((?<=BANK NAME)(.*?)(?=(ACCOUNT NUMBER|THANKING|SWIFT CODE|ROUTING NO|CUSTOMER’S NAME)))|((?!.*ARAB)(?<=BANK\\s*:)(.*?)(?=(SWIFT CODE|ACCOUNT NO. :)))|((?<=BENEFICIARY ADDRESS)(.*?)(?=PURPOSE))|((?<=(BELOW BANK|BANK DETAILS))(.*?)(?=ACCOUNT NO))|((?<=BENEFICIARY BANK)(.*?)(?=A/C NO))))"
+          "option": "(?<BeneficiaryBankName>(((?<=ADDRESS\\*)(.*?)(?=(SWIFT CODE)))|((?<=ADDRESS\\* SWIFT)(.*?)(?=SORT))|((?<=BANK NAME)(.*?)(?=(ACCOUNT NUMBER|THANKING|SWIFT CODE|ROUTING NO|CUSTOMER’S NAME)))|((?!.*ARAB)(?<=BANK)[\\s*:]+(.*?)(?=(SWIFT CODE|ACCOUNT NO. :)))|((?<=BENEFICIARY ADDRESS)(.*?)(?=PURPOSE))|((?<=(BELOW BANK|BANK DETAILS))(.*?)(?=ACCOUNT NO))|((?<=BENEFICIARY BANK)(.*?)(?=A/C NO))))"
         },
         {
           "option": "(?<BeneficiaryBankName>((?<=Sort)(.*?)(?=Code)))"
