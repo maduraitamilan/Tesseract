@@ -43,7 +43,7 @@
           "option": "(?<IBAN>(([A-Z]{2}[0-9]{2}[A-Z]{4}[0-9]{14,})))"
         },
 		{
-          "option": "(?<IBAN>(([A-Z]{3}[0-9]{20,})))"
+          "option": "(?<IBAN>(([A-Z]{2,3}[0-9]{19,})))"
         },
 		{
           "option": "(?<IBAN>((\\s[0-9]{20,})))"
@@ -55,7 +55,7 @@
           "option": "(?<IBAN>(([0-9\\s]{26})))"
         }
         {
-          "option": "(?<IBAN>(([0-9]{13})))"
+          "option": "(?<IBAN>(([0-9]{13,})))"
         }
       ]
     },
@@ -74,7 +74,10 @@
       "key": "BeneficiaryName",
       "regexString": [
         {
-          "option": "(?<BeneficiaryName>(((?<=(PASSPORT|Beneficiarys Name|pass Sort))(.*?)(?=(A*)DDRESS))|((?<=Beneficiary Details)(.*?)(?=Full Beneficiary's Name))|((?<=Beneficiary Details)(.*?)(?=Full Beneficiary's Name))))"
+          "option": "(?<BeneficiaryName>(((?<=(PASSPORT|Beneficiarys Name|pass Sort))(.*?)(?=(ADDRESS|City)))))"
+        },
+		        {
+          "option": "(?<BeneficiaryName>(((?<=(Beneficiary Details))(.*?)(?=(Full Beneficiary)))))"
         },
         {
           "option": "(?<BeneficiaryName>(((?<=Contact Details)(.*?)(?=City))))"
@@ -85,11 +88,14 @@
       "key": "Purpose",
       "regexString": [
         {
-          "option": "(?<Purpose>(((?<=(PURPOSE OF TRANSFER|PURPOSE OF TRANSFER\\*))(.*?)(?=CUSTOMER))|((?<=(Details of payment|payment))(.*?)(?=Thank you))|((?<=Special Instructions)(.*?)(?=Commission))|((?<=Please mention on your transfer)(.*?)(?=Yours faithfully))))"
+          "option": "(?<Purpose>(((?<=(PURPOSE OF TRANSFER|PURPOSE OF TRANSFER\\*))(.*?)(?=CUSTOMER))))"
         },
         {
-          "option": "(?<Purpose>(((?<=Applicant Details)(.*?)(?=Customer’s Name))|((?<=Code)(.*?)(?=Purpose of Transfer))))"
-        }
+          "option": "(?<Purpose>(((?<=Applicant Details)(.*?)(?=Customer’s Name))))"
+        },
+        {
+          "option": "(?<Purpose>(((?<=Code)(.*?)(?=Purpose of Transfer))))"
+        }		
       ]
     }
   ]
