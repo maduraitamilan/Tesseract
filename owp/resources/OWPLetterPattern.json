@@ -82,10 +82,10 @@
           "option": "(?<BeneficiaryName>(((?<=Account Name)(.*?)(?=(Account Number|Account No|ADDRESS|GIBAN NO)))))"
         }
         {
-          "option": "(?<BeneficiaryName>(((?<=(Beneficiary’s Name|Beneficiary Name))(.*?)(?=(Beneficiary’s Address|Beneficiary Address)))))"
+          "option": "(?<BeneficiaryName>(((?<=(Beneficiary's Name|Beneficiary Name))(.*?)(?=(Beneficiary's Address|Beneficiary Address)))))"
         },
         {
-          "option": "(?<BeneficiaryName>(((?<=(Beneficiary’s Name))(.*?)(?=(Address)))))"
+          "option": "(?<BeneficiaryName>(((?<=(Beneficiary's Name))(.*?)(?=(Address)))))"
         },		
 		{
           "option": "(?<BeneficiaryName>(((?<=Beneficiary)(.*?)(?=(BANK|IBAN)))))"
